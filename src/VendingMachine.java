@@ -25,27 +25,43 @@ public class VendingMachine {
 		
 		if(confirmation == "Y")
 		{
-			if (input == "C") {
+			if (purchase == "C") {
 				if (moneyInput == chips) {
-					
+					System.out.println("Here are your chips. Have a good day.");
 				}
 				else if(moneyInput > chips) {
-					
+					System.out.println("Here are your chips and " + (moneyInput - chips) + " dollars. Have a good day.");
 				}
 				else {
-					System.out.println("You did not insert the required amount of money.")
+					System.out.println("You did not insert the required amount of money.");
 				}
 			}
-			else if (input == "CB") {
+			else if (purchase == "CB") {
+				if (moneyInput == candyBar) {
+					System.out.println("Here is your candy bar. Have a good day.");
+				}
+				else if(moneyInput > candyBar) {
+					System.out.println("Here is your candy bar and " + (moneyInput - candyBar) + " dollars. Have a good day.");
+				}
+				else {
+					System.out.println("You did not insert the required amount of money.");
+				}
+			}
+			else if (purchase == "G") {
+				if (moneyInput == gum) {
+					System.out.println("Here is your gum. Have a good day.");
+				}
+				else if(moneyInput > gum) {
+					System.out.println("Here is your gum and " + (moneyInput - gum) + " dollars. Have a good day.");
+				}
+				else {
+					System.out.println("You did not insert the required amount of money.");
+				}
+			}
+			else if (purchase == "P") {
 				
 			}
-			else if (input == "G") {
-				
-			}
-			else if (input == "P") {
-				
-			}
-			else if (input == "POP") {
+			else if (purchase == "POP") {
 				
 			}
 			else {
