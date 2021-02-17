@@ -59,13 +59,29 @@ public class VendingMachine {
 				}
 			}
 			else if (purchase == "P") {
-				
+				if (moneyInput == pretzels) {
+					System.out.println("Here are your pretzels. Have a good day.");
+				}
+				else if(moneyInput > pretzels) {
+					System.out.println("Here are tour pretzels and " + (moneyInput - pretzels) + " dollars. Have a good day.");
+				}
+				else {
+					System.out.println("You did not insert the required amount of money.");
+				}
 			}
 			else if (purchase == "POP") {
-				
+				if (moneyInput == popcorn) {
+					System.out.println("Here is your popcorn. Have a good day.");
+				}
+				else if(moneyInput > popcorn) {
+					System.out.println("Here is your popcorn and " + (moneyInput - popcorn) + " dollars. Have a good day.");
+				}
+				else {
+					System.out.println("You did not insert the required amount of money.");
+				}
 			}
 			else {
-				
+				System.out.println("You did not input a valid item.");
 			}
 		}
 		else {
