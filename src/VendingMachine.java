@@ -20,60 +20,63 @@ public class VendingMachine {
 		
 		int moneyInput = input.nextInt();
 		
+		input.nextLine();
+		
 		System.out.println("Are you sure you want to make this purchase? Y for yes, N for no.");
+		
 		String confirmation = input.nextLine();
 		
-		if(confirmation == "Y")
+		if(confirmation.contains("Y"))
 		{
-			if (purchase == "C") {
-				if (moneyInput == chips) {
+			if (purchase.contains("C")) {
+				if ((double)moneyInput == chips) {
 					System.out.println("Here are your chips. Have a good day.");
 				}
-				else if(moneyInput > chips) {
+				else if((double)moneyInput > chips) {
 					System.out.println("Here are your chips and " + (moneyInput - chips) + " dollars. Have a good day.");
 				}
 				else {
 					System.out.println("You did not insert the required amount of money.");
 				}
 			}
-			else if (purchase == "CB") {
-				if (moneyInput == candyBar) {
+			else if (purchase.contains("CB")) {
+				if ((double)moneyInput == candyBar) {
 					System.out.println("Here is your candy bar. Have a good day.");
 				}
-				else if(moneyInput > candyBar) {
+				else if((double)moneyInput > candyBar) {
 					System.out.println("Here is your candy bar and " + (moneyInput - candyBar) + " dollars. Have a good day.");
 				}
 				else {
 					System.out.println("You did not insert the required amount of money.");
 				}
 			}
-			else if (purchase == "G") {
-				if (moneyInput == gum) {
+			else if (purchase.contains("G")) {
+				if ((double)moneyInput == gum) {
 					System.out.println("Here is your gum. Have a good day.");
 				}
-				else if(moneyInput > gum) {
+				else if((double)moneyInput > gum) {
 					System.out.println("Here is your gum and " + (moneyInput - gum) + " dollars. Have a good day.");
 				}
 				else {
 					System.out.println("You did not insert the required amount of money.");
 				}
 			}
-			else if (purchase == "P") {
-				if (moneyInput == pretzels) {
+			else if (purchase.contains("P")) {
+				if ((double)moneyInput == pretzels) {
 					System.out.println("Here are your pretzels. Have a good day.");
 				}
-				else if(moneyInput > pretzels) {
+				else if((double)moneyInput > pretzels) {
 					System.out.println("Here are tour pretzels and " + (moneyInput - pretzels) + " dollars. Have a good day.");
 				}
 				else {
 					System.out.println("You did not insert the required amount of money.");
 				}
 			}
-			else if (purchase == "POP") {
-				if (moneyInput == popcorn) {
+			else if (purchase.contains("POP")) {
+				if ((double)moneyInput == popcorn) {
 					System.out.println("Here is your popcorn. Have a good day.");
 				}
-				else if(moneyInput > popcorn) {
+				else if((double)moneyInput > popcorn) {
 					System.out.println("Here is your popcorn and " + (moneyInput - popcorn) + " dollars. Have a good day.");
 				}
 				else {
